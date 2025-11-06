@@ -1,9 +1,19 @@
 import "./Nav.css"
+import Home from '../Home/Home.jsx'
+import CompanyHistory from '../CompanyHistory/CompanyHistory.jsx'
+import PastWork from '../PastWork/PastWork.jsx'
+import Staff from '../Staff/Staff.jsx'
+import ContactUs from '../ContactUs/ContactUs.jsx'
 
+const Nav = ({ handlePageChange }) => {
 
-const Nav = (props) => {
-
-  const navLinks = ["Home", "Company History", "Past Work", "Staff", "Contact Us"]
+  const navLinks = [
+    { text: "Home", component: <Home /> },
+    { text: "Company History", component: <CompanyHistory /> },
+    { text: "Past Work", component: <PastWork /> },
+    { text: "Staff", component: <Staff /> },
+    { text: "Contact Us", component: <ContactUs /> },
+  ]
 
   const externalLinks = [
     { link: "https://github.com", text: "Github", icon: "/icons/github.svg" },
@@ -17,7 +27,7 @@ const Nav = (props) => {
         {
           navLinks.map((link, index) => {
              return <li key={index}>
-              <button onClick={() => {}}>{link}</button>
+               <button onClick={() => { handlePageChange( link.component ) }}>{link.text}</button>
             </li>
           })
         }
