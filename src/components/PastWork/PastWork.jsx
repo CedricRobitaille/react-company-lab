@@ -18,10 +18,8 @@ const PastWork = () => {
   
 
   const handleCarousel = (direction) => {
-
     setCurrentProject(n => ((n + direction) % (projects.length) + projects.length) % (projects.length))
     setProject(projects[currentProject])
-
   }
 
   return (

@@ -14,9 +14,11 @@ function App() {
 
   return (
     <>
-      <h1>Hello</h1>
       <Nav handlePageChange={handlePageChange} />
-      { page }
+      <main>
+        {page}
+      </main>
+      
     </>
   )
 }

@@ -1,3 +1,8 @@
+nav {
+  padding: .5rem 2rem;
+  background-color: rgba(255,255,255,.125)
+}
+
 nav ul {
   display: flex;
   gap:  1rem;

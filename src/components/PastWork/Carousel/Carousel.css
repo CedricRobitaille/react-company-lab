@@ -1,0 +1,18 @@
+.carousel {
+  display: grid;
+  grid-template-columns: 9ch 1fr 9ch;
+  align-items: center;
+  gap: 2rem;
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-btn {
+  padding: .5rem 0 .6rem;
+  text-align: center;
+}
